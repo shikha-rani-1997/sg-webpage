@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;
+width:70%;
+height: 500px;
+
+}
+
+/* Slideshow container */
+.changiview {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  font-weight:bold;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+
+
+}
+.text::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="changiview">
+
+<div class="each fade">
+  <img src="changi.jpg" style="width:100%">
+  <div class="text">
+ <h2>SINGAPORE CHANGI Airpot</h2>
+<p>The world's best airport and destination in itself,attracting enormous awards and tourists to experience this equisitly designed architecture.</p>
+
+  </div>
+</div>
+
+<div class="each fade">
+  <img src="Singapore-Airport-News.jpg" style="width:100%">
+  <div class="text">
+<h2>AN AIRPOT WITH LATEST ADVANCEMENTS</h2>
+<P>THE LAND OF MERLION HAS THE MOST TECHNICALLY ADVANCED, WORLD'S MOST SMART AIRPOT</P>
+<p>Highly secured security checkpoints,and highly automated systems.</p>
+  </div>
+</div>
+<div class="each fade">
+  <img src="inside changi.jpg" style="width:100%">
+  <div class="text"><h2>THE BUTTERFLY GARDEN</h2>
+<p>Changi Airport proudly proclaims the Butterfly Garden to be the world’s first butterfly habitat in an airport</p>
+</div>
+</div>
+
+<div class="each fade">
+  <img src="canopy-bridge-jewel-changi-airport-1170x730.jpg" style="width:100%">
+  <div class="text">
+<h2>JEWEL CHANGI AIRPOT</h2>
+<h3>THE CANOPY BRIDGE, THE REJUVINATING WATERFALL</h3>
+<P>A multi-dimensional lifestyle destination located at the heart of Singapore Changi Airport,features a wide array of offerings, such as gardens and attractions, over 280 retail and dining options,a hotel and facilities for airport operations.It houses the four-storey high Shiseido Forest Valley, and the world’s tallest indoor waterfall,the 40 metre tall HSBC Rain Vortex.</P></div>
+</div>
+
+<div class="each fade">
+  <img src="color changi.jpg" style="width:100%">
+  <div class="text"><h2>THE ENLIGHTNING EVENING VIEW</h2>
+<H3>RESONATING EVENING VIEW OF FOREST VALLEY,AS MULTISENSORIAL ART INSTALLATION AND RESONATING TREES AT CANOPY PARK</H3></div>
+</div>
+
+<div class="each fade">
+  <img src="An Exterior view of Jewel Changi Airport.jpg" style="width:100%">
+  <div class="text"><H2>THE ROAD TRIP BEGINS</H2>
+<H3>Changi airport taxis,will take you in to the city for the pleasing far sight visuals of singapores destination</H3></div>
+</div>
+
+
+
+<a class="prev" onclick="plus(-1)">&#10094;</a>
+<a class="next" onclick="plus(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+<script>
+var index = 1;
+viewslides(index);
+
+function plus(n) {
+  viewslides(index += n);
+}
+
+function currentSlide(n) {
+  viewslides(index = n);
+}
+
+function viewslides(n) {
+  var i;
+  var slides = document.getElementsByClassName("each");
+ 
+  if (n > slides.length) {index = 1}    
+  if (n < 1) {index = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+ 
+  slides[index-1].style.display = "block";  
+  dots[index-1].className += " active";
+}
+</script>
+
+</body>
+</html> 

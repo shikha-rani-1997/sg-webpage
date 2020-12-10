@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  height:100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+</head>
+<body>
+
+<div class="top-container">
+  <h1>Scroll Down</h1>
+  <p>Scroll down to see the sticky effect.</p>
+</div>
+
+<div class="header" id="myHeader">
+  <h2>My Header</h2>
+</div>
+
+<div class="content">
+  <h3> We will introduce you all you need to know about Singapore. Our history, facts, climate and location, culture and language.
+
+There is so much you can learn about Singapore. We hope this interesting read will help you know more about this exciting island city.</h3>
+<p>Though physically small, Singapore is an economic giant. It has been Southeast Asia's most modern city for over a century. The city blends Malay, Chinese, Arab, Indian and English cultures and religions. Its unique ethnic tapestry affords visitors a wide array of sightseeing and culinary opportunities from which to choose. A full calendar of traditional festivals and holidays celebrated throughout the year adds to its cultural appeal. In addition, Singapore offers luxury hotels, delectable cuisine and great shopping! The island nation of the Republic of Singapore lies one degree north of the Equator in Southern Asia. The country includes the island of Singapore and 58 or so smaller islands. Because of its efficient and determined government, Singapore has become a flourishing country that excels in trade and tourism and is a model to developing nations. The capital city, also called Singapore, covers about a third of the area of the main island.</p>
+<p>In the city, there is no need for a car. Public transportation is excellent and walking is a good way to explore the city . All major attractions are also accessible by tour bus. Since the city is only 60 miles (100k) from the equator, the tropical temperatures do not vary much. Rainfall is fairly evenly distributed through the year. No matter when you choose to visit, warm weather will be abundantly available. The visitor is struck immediately by Singapore's abundance of parks, nature reserves, and lush, tropical greenery.</p>
+<p>Singapore is both an island and a country, but perhaps its best description is that of city-state. Like the great city-states of the past, it offers civilization and order in the highest degree. Its combination of Western-style development and Eastern-style calm seems to present the best of both hemispheres: It's a modern metropolis where you feel safe walking the streets, and it's an Asian business center that's a model of efficiency. Singapore is also a multicultural city, and close to one-quarter of its population are expatriates or foreign workers from all over the world. Known for its desire to become the technology hub of Asia, Singapore is the most wired country in the region.</p>
+<p>Like most of Southeast Asia, Singapore is generally hot and humid. It's warm and humid year round, with the temperature almost never dropping below 20°C (68°F), even at night, and usually climbing to 30°C (86°F) during the day. Recent times, it even reached till 35°C.  Humidity is high, mounting over a 75% mark.
+
+November and December is the rainy season. June-August is considered to be the best time to visit, but even then it rains often. Don't let the climate stop you from going, however. Most buildings are air-conditioned (to the point that you may want to take a sweater), and pains have been taken to make everything as comfortable as can be, all things considered. When it does rain, it's generally only for a short period.
+
+For those who enjoy the sun and the beach, Singapore is an ideal place for beach lovers, as you get the hot hot sun throughout the year. So when you're in Singapore, just bring along your cooling apparels and hats.
+
+</p>
+<p>Singapore's strategic location at the southern tip of the Malaysian peninsula has ensured its importance, which is greater than its size might seem to justify. Singapore consists of the island of Singapore and some 63 islets within its territorial waters. The main island is about 26 mi/42 km from west to east and 14 mi/23 km from north to south. It's a mostly undulating country with low hills (the highest, 540-ft/166-m Bukit Timah Hill, is to the northwest of the city).
+
+Singapore's Central Business District actually spreads across both the central and southern parts of the island (you'll know when you're there - it boasts striking high-rise structures). You can get a good visual orientation to the city as you cross the Benjamin Sheares Bridge on the East Coast Parkway, which links the airport to the city center. The Singapore cityscape looks magnificent, particularly at night when buildings are brilliantly lit. Offshore, there appears to be another city all lit up because of the many ships anchored there - Singapore is one of the busiest seaports in the world.
+
+Many of the city's attractions are clustered closely together. Orchard Road, the shoppers' haven, is located in the northern part of the city center. Chinatown, where you'll find Boat Quay, is just to the southeast of Orchard Road, while Little India is northeast. Sentosa Island, with its many amusements, is directly to the southwest of the city center. These frequently visited neighborhoods, as well as more suburban areas, remain a bustling hive of pedestrian activity well into the evening.</p>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
